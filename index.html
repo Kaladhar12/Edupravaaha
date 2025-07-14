@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>EDU PRAVAHA - A Modern Learning Experience</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Education, Online Courses, Learning Platform" name="keywords">
+    <meta content="EDU PRAVAHA offers a modern and engaging platform for online learning with skilled instructors and practical courses." name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Heebo:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Main Stylesheet -->
+    <style>
+        /* 
+        ========================================
+        BEAUTIFUL DESIGN SYSTEM
+        ========================================
+        */
+
+        /* 1. Root Variables & Color Palette */
+        :root {
+            --primary: #06225E; /* Deep Navy Blue */
+            --secondary: #61ff90; /* Vibrant Coral */
+            --light: #F8F9FA; /* Soft Off-White */
+            --dark: #121212; /* Rich Black */
+            --body-bg: #FFFFFF;
+            --text-muted: #6c757d;
+            --border-radius: 12px;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+            --transition: all 0.3s ease;
+        }
+
+        /* 2. General Body & Typography */
+        body {
+            font-family: 'Nunito', sans-serif;
+            background-color: var(--body-bg);
+            color: var(--text-muted);
+            font-weight: 400;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Heebo', sans-serif;
+            font-weight: 700;
+            color: var(--dark);
+        }
+
+        .fw-medium { font-weight: 600 !important; }
+        .text-primary { color: var(--primary) !important; }
+        .text-secondary { color: var(--secondary) !important; }
+
+        /* 3. Buttons */
+        .btn {
+            font-family: 'Nunito', sans-serif;
+            font-weight: 600;
+            transition: var(--transition);
+            border-radius: 8px;
+            padding: 12px 30px;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            border-color: var(--primary);
+            color: #FFFFFF;
+        }
+        .btn-primary:hover {
+            background-color: #041a4a;
+            border-color: #041a4a;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(6, 34, 94, 0.2);
+        }
+        
+        .btn-lg-square {
+            width: 48px;
+            height: 48px;
+            padding: 0;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: normal;
+            border-radius: 8px;
+        }
+
+        /* 4. Navbar */
+        .navbar {
+            padding: 15px 0;
+            background-color: var(--body-bg) !important;
+            box-shadow: var(--shadow);
+        }
+
+        .navbar-brand h2 {
+            color: var(--primary) !important;
+            font-weight: 800;
+        }
+        .navbar-brand i {
+            color: var(--secondary);
+        }
+        
+        .navbar-nav .nav-link {
+            padding: 8px 15px !important;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--dark);
+            transition: var(--transition);
+        }
+
+        .navbar-nav .nav-link:hover,
+        .navbar-nav .nav-link.active {
+            color: var(--primary);
+        }
+
+        /* 5. Hero Header with Waves */
+        .hero-header {
+            background-color: var(--light);
+            padding: 8rem 0 10rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-header h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+        }
+        .hero-header p {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+        }
+        .waves-container {
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 100%;
+            z-index: 1;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        /* 6. Feature Cards Section */
+        .feature-cards-section {
+            margin-top: -80px; /* Pulls cards up over the waves */
+            position: relative;
+            z-index: 2;
+        }
+        
+        .feature-card {
+            background-color: #FFFFFF;
+            padding: 40px 30px;
+            text-align: center;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            height: 100%;
+            transition: var(--transition);
+        }
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .feature-card .icon-box {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 80px;
+            height: 80px;
+            margin-bottom: 25px;
+            background: linear-gradient(135deg, var(--secondary), #ff8f82);
+            border-radius: 50%;
+            font-size: 2.5rem;
+            color: #FFFFFF;
+            box-shadow: 0 5px 15px rgba(255, 111, 97, 0.4);
+        }
+        .feature-card h5 {
+            font-size: 1.25rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        /* 7. About Section */
+        .section-eyebrow {
+            display: inline-block;
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--secondary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        .section-title {
+            font-size: 2.75rem;
+            font-weight: 800;
+        }
+        
+        .about-image-container {
+            position: relative;
+            min-height: 400px;
+        }
+        
+        .about-image-container .img-fluid {
+            border-radius: var(--border-radius);
+            position: relative;
+            z-index: 1;
+        }
+        
+        .about-image-container::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            width: 100%;
+            height: 100%;
+            background-color: #eef3ff;
+            border-radius: var(--border-radius);
+            z-index: 0;
+        }
+        
+        .about-content p {
+            color: var(--text-muted);
+        }
+
+        .about-content ul {
+            list-style: none;
+            padding: 0;
+            color: var(--text-muted);
+        }
+        .about-content ul li {
+            padding-bottom: 15px;
+            font-size: 1.1rem;
+        }
+        .about-content ul li i {
+            color: var(--secondary);
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+
+        /* 8. Footer */
+        .footer {
+            background-color: var(--primary);
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        .footer .footer-title {
+            font-size: 1.5rem;
+            color: #FFFFFF;
+            margin-bottom: 25px;
+            font-weight: 600;
+        }
+        
+        .footer .btn.btn-link {
+            padding: 0;
+            color: rgba(255, 255, 255, 0.7);
+            display: block;
+            margin-bottom: 10px;
+            text-align: left;
+            transition: var(--transition);
+        }
+        
+        .footer .btn.btn-link::before {
+            content: "\f105";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            margin-right: 10px;
+        }
+
+        .footer .btn.btn-link:hover {
+            color: #FFFFFF;
+            letter-spacing: 1px;
+        }
+
+        .footer .contact-info p {
+             color: rgba(255, 255, 255, 0.7);
+        }
+        .footer .contact-info p i {
+            margin-right: 15px;
+        }
+        
+        .footer .social-icons .btn {
+            background: rgba(255, 255, 255, 0.1);
+            color: #FFFFFF;
+            margin-right: 5px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+        .footer .social-icons .btn:hover {
+            background: var(--secondary);
+            color: #FFFFFF;
+        }
+
+        .footer .copyright a {
+            color: var(--light);
+            border-bottom: 1px dotted rgba(255, 255, 255, 0.5);
+        }
+        .footer .copyright a:hover {
+            color: var(--secondary);
+            border-bottom-color: var(--secondary);
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg shadow-sm sticky-top p-0">
+        <div class="container-lg">
+            <a href="index.html" class="navbar-brand d-flex align-items-center">
+                <h2 class="m-0"><i class="fa fa-book-reader me-3"></i>EDU PRAVAHA</h2>
+            </a>
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto py-4 py-lg-0">
+                    <a href="index.html" class="nav-item nav-link active">Home</a>
+                    <!-- <a href="about.html" class="nav-item nav-link">About</a> -->
+                    <a href="courses.html" class="nav-item nav-link">Courses</a>
+                    <div class="nav-item dropdown">
+                        <!-- <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a> -->
+                        <div class="dropdown-menu m-0">
+                            <a href="team.html" class="dropdown-item">Our Team</a>
+                            <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                            <a href="404.html" class="dropdown-item">404 Page</a>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+
+    <!-- Hero Header Start -->
+    <div class="container-fluid hero-header">
+        <div class="container hero-content text-center">
+            <div class="wow fadeInUp" data-wow-delay="0.1s">
+                <h1 class="display-3 text-dark mb-4">Unlock Your Potential with Modern Learning</h1>
+                <p class="fs-5 mb-5">Join thousands of learners and gain the skills you need to succeed in today's world.</p>
+                <a href="#about" class="btn btn-primary py-3 px-5">Discover More</a>
+            </div>
+        </div>
+        <!-- Animated SVG Waves -->
+        <div class="waves-container">
+            <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                <defs>
+                    <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                </defs>
+                <g class="parallax">
+                    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(6,34,94,0.1)" />
+                    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(6,34,94,0.2)" />
+                    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(6,34,94,0.3)" />
+                    <use xlink:href="#gentle-wave" x="48" y="7" fill="var(--primary)" />
+                </g>
+            </svg>
+        </div>
+    </div>
+    <!-- Hero Header End -->
+
+
+    <!-- Feature Cards Section Start -->
+    <div class="container-xxl py-5 feature-cards-section">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="feature-card">
+                        <div class="icon-box">
+                            <i class="fa fa-user-tie"></i>
+                        </div>
+                        <h5 class="mb-3">Skilled Instructors</h5>
+                        <p>Learn from industry experts who bring real-world experience and passion to every lesson.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="feature-card">
+                        <div class="icon-box">
+                           <i class="fa fa-laptop-code"></i>
+                        </div>
+                        <h5 class="mb-3">Flexible Online Classes</h5>
+                        <p>Study at your own pace, anytime, anywhere. Our platform is designed for your busy lifestyle.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="feature-card">
+                        <div class="icon-box">
+                            <i class="fa fa-project-diagram"></i>
+                        </div>
+                        <h5 class="mb-3">Hands-On Projects</h5>
+                        <p>Apply your knowledge with practical projects that build a strong, job-ready portfolio.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Feature Cards Section End -->
+
+
+    <!-- About Start -->
+    <div id="about" class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="about-image-container">
+                        <img class="img-fluid w-100 shadow" src="img/about.jpg" alt="Group of students learning">
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                    <h6 class="section-eyebrow">About Us</h6>
+                    <h1 class="mb-4 section-title">Welcome to EDU PRAVAHA</h1>
+                    <div class="about-content">
+                        <p class="mb-4">We are dedicated to bridging the gap between academic knowledge and practical industry skills. Our mission is to empower individuals to achieve their professional goals through high-quality, accessible education.</p>
+                        <p class="mb-4">At EDU PRAVAHA, we believe learning should be an engaging and transformative experience. That's why we focus on:</p>
+                        <ul class="mb-4">
+                            <li><i class="fa fa-check-circle"></i> Curriculum designed by industry experts.</li>
+                            <li><i class="fa fa-check-circle"></i> A supportive community of learners and mentors.</li>
+                            <li><i class="fa fa-check-circle"></i> Career guidance and placement assistance.</li>
+                        </ul>
+                        <a class="btn btn-primary py-3 px-5 mt-3" href="">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+    <!-- Footer Start -->
+    <div class="container-fluid footer text-light pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-6 col-md-6">
+                    <h4 class="footer-title">EDU PRAVAHA</h4>
+                    <p>Your partner in lifelong learning. We provide the tools and expertise to help you navigate your career path successfully.</p>
+                    <!-- <div class="d-flex pt-2 social-icons">
+                        <a class="me-2" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="me-2" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="me-2" href=""><i class="fab fa-youtube"></i></a>
+                        <a class="" href=""><i class="fab fa-linkedin-in"></i></a>
+                    </div> -->
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <h4 class="footer-title">Contact</h4>
+                    <div class="contact-info">
+                        <p class="mb-2"><i class="fa fa-map-marker-alt">&nbsp;</i>Road No.36, Ayyappa Society, Madhapur, HYD-500081</p>
+                        <p class="mb-2"><i class="fa fa-phone-alt">&nbsp;</i> 9100241284, 9063816931</p>
+                        <p class="mb-2"><i class="fa fa-envelope">&nbsp;</i>kranthikiran@edupravahaa.com</p>
+                    </div>
+                </div>
+                <!-- <div class="col-lg-4 col-md-6">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <a class="btn btn-link" href="">About Us</a>
+                    <a class="btn btn-link" href="">Contact Us</a>
+                    <a class="btn btn-link" href="">Our Courses</a>
+                    <a class="btn btn-link" href="">Privacy Policy</a>
+                    <a class="btn btn-link" href="">Terms & Condition</a>
+                </div> -->
+            </div>
+        </div>
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-12 text-center mb-3 mb-md-0 py-4">
+                        © <a href="#">EDU PRAVAHA</a>, All Right Reserved.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
